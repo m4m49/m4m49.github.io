@@ -1,14 +1,31 @@
+html,body{
+	max-width: 100%;
+	overflow-x: hidden;
+	font-family: montserrat;
+	scroll-behavior: smooth;
+}
+
 /*navbar*/
+
 .navbar{
-	position: fixed;
 	z-index: 9999;
-	color: black;
-	background-color: rgba(255, 255, 255, 0.9);
+	background: linear-gradient( 100deg, rgb(157, 91, 254) 10%, rgb(56, 144, 254) 100%);
+	padding-top:1px !important;
+	padding-bottom:1px !important;
+	box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
 
 }
+
+.navbar-brand, .nav-link{
+	color: white !important;
+}
+
+.nav-link{
+	font-size: 14px;
+}
 .navbar-brand {
-	font-family: viga;
-	font-size: 32px;
+	font-family: montserrat;
+	font-size: 26px;
 }
 
 
@@ -16,11 +33,12 @@
 
 /*jumbbotron*/
 .jumbotron{
-	background-image: url(../img/bg.jpg);
+	background-image: url(../img/bg2.jpg);
 	background-size: cover;
 	height: 540px;
 	text-align: center;
 	position: relative;
+	background-attachment: fixed;
 }
 .jumbotron .container{
 	z-index: 1;
@@ -57,7 +75,7 @@
 	box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
 	border-radius: 12px;
 	margin-top: -100px;
-	background-color: white;
+	background: linear-gradient( 200deg, rgb(157, 91, 254) 0%, rgb(56, 144, 254) 100%);
 	padding: 30px;
 
 }
@@ -76,24 +94,33 @@
 	text-transform: uppercase;
 	font-weight: bold;
 	margin-top: 5px;
+	color: white;
 }
 
 .info-panel p{
 	font-size: 14px;
-	color: #acacac;
+	color: #ddd;
 	font-weight: 200;
 }
 
-
-/*working space*/
-
-.workingspace{
-	margin-top: 120px;
+/*about*/
+.about{
+	margin-top: 100px;
 	text-align: center;
 }
 
+body{
+	background-image: linear-gradient( 200deg, rgb(144, 91, 254) 0%, rgb(56, 144, 254) 100%);
+}
+/*working space*/
+
+.workingspace{
+	text-align: center;
+	margin-top:100px;
+}
+
 .workingspace h3{
-	font-size: 52px;
+	font-size: 45px;
 	font-weight: 200;
 	text-transform: uppercase;
 	margin-top: 30px
@@ -107,8 +134,9 @@
 	font-size: 18px;
 	color: #acacac;
 	font-weight: 200;
-	margin: 30px 0;
+	margin: 20px 0;
 }
+
 
 
 /*testimonial*/
@@ -125,7 +153,32 @@
 }
 
 
+/*section*/
+.bungkus{
+	width: 100%;
+	min-height: 100vh;
+/*	background-color: salmon;*/
+}
 
+/*footer*/
+.footer{
+	height: 60px;
+	width:100%;
+	background: rgb(57, 131, 254);
+	text-align: center;
+	color: white;
+	font-size: 15px;
+	padding: 20px;
+
+}
+
+/*services*/
+.service{
+	margin-top:100px;
+	box-shadow: 0px 2px 20px rgba(0,0,0,0.5);
+	padding: 30px;
+	background: linear-gradient( 20deg, rgb(157, 91, 254) 0%, rgb(56, 144, 254) 100%);
+}
 
 /*utility*/
 .tombol{
@@ -133,23 +186,28 @@
 	border-radius: 40px;
 }
 
+hr{
+	width: 300px;
+	border-color: rgb(160, 91, 254);
+}
 
 
 /*desktop version*/
 @media (min-width: 992px) {
-
+	.bungkus{
+		min-height: 100vh;
+	}
 	.navbar{
 	position: fixed;
 	z-index: 9999;
 	color: black;
 	background-color: rgba(0, 0, 0, 0.7);
-	box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.3);
-
+	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
 	}
 
 	.navbar-brand, .nav-link{
 		color: white !important;
-		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+
 	}
 
 	.nav-link {
@@ -160,12 +218,17 @@
 	.nav-link:hover::after{
 		content: '';
 		display: block; 
-		border-bottom: 3px solid #0b63dc;
+		border-bottom: 3px solid  rgb(170, 110, 120);
 		width: 50%;
 		margin:auto;
 		padding-bottom: 5px;
 		margin-bottom: -8px;
 	}
+
+	.nav-link:active{
+		color:rgb(170, 110, 120) !important;
+	}
+
 	.jumbotron{
 		margin-top: -75px;
 		height: 640px;
