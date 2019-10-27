@@ -8,6 +8,7 @@ html,body{
 /*navbar*/
 
 .navbar{
+	width: 100%;
 	z-index: 9999;
 	background: linear-gradient( 100deg, rgb(157, 91, 254) 10%, rgb(56, 144, 254) 100%);
 	padding-top:1px !important;
@@ -33,26 +34,45 @@ html,body{
 
 /*jumbbotron*/
 .jumbotron{
-	background-image: url(../img/bg2.jpg);
+	background-image: url(../img/bg.jpg);
 	background-size: cover;
 	height: 540px;
 	text-align: center;
 	position: relative;
 	background-attachment: fixed;
+
 }
 .jumbotron .container{
 	z-index: 1;
 	position: relative;
+	text-align: center;
 }
 
-.jumbotron .display-4{
-	color: white;
+.teamq{
 	margin-top: 150px;
-	font-weight: 200;
-	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
-	font-size: 31px;
-
+	text-align: center;
 }
+
+.team{
+	display: inline-block;
+	width: 200px;
+	height: 200px;
+	background: #eee;
+	margin-top: 40px;
+	border-radius: 50%;
+	text-align: center;
+	padding: 30px;
+	box-shadow: 0 3px 30px solid rgba(0,0,0,.5);
+	background: linear-gradient( 0deg, rgb(157, 91, 254) 10%, rgb(56, 144, 254) 100%);
+}
+.team h5{
+	display: inline-block;
+	margin-top: 30px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #eee;
+}
+
 
 .jumbotron::after{
 	content: '';
@@ -62,11 +82,6 @@ html,body{
 	background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0 ,0));
 	position: absolute;
 	bottom: 0;
-}
-
-.jumbotron .display-4 span{
-	font-weight: 500;
-	margin-bottom: 30px;
 }
 
 /*info panel*/
@@ -81,8 +96,8 @@ html,body{
 }
 
 .info-panel img{
-	width: 80px;
-	height: 80px;
+	width: 45px;
+	height: 45px;
 	margin-right: 20px;
 	margin-bottom: 20px;
 
@@ -90,7 +105,7 @@ html,body{
 }
 
 .info-panel h4{
-	font-size: 16px;
+	font-size: 14px;
 	text-transform: uppercase;
 	font-weight: bold;
 	margin-top: 5px;
@@ -98,7 +113,7 @@ html,body{
 }
 
 .info-panel p{
-	font-size: 14px;
+	font-size: 12px;
 	color: #ddd;
 	font-weight: 200;
 }
@@ -107,11 +122,10 @@ html,body{
 .about{
 	margin-top: 100px;
 	text-align: center;
+	color: #fff;
+
 }
 
-body{
-	background-image: linear-gradient( 200deg, rgb(144, 91, 254) 0%, rgb(56, 144, 254) 100%);
-}
 /*working space*/
 
 .workingspace{
@@ -162,22 +176,104 @@ body{
 
 /*footer*/
 .footer{
-	height: 60px;
+	position: fixed;
+	height: 100px;
 	width:100%;
-	background: rgb(57, 131, 254);
-	text-align: center;
-	color: white;
+	bottom: 0;
+	background: #262626;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #666;
 	font-size: 15px;
 	padding: 20px;
+	z-index: -9999;
 
+}
+.margin100px{
+	height: auto;
+	width: 100%;
+	background-image: linear-gradient( 200deg, rgb(144, 91, 254) 5%, rgb(56, 144, 254) 90%);
+	margin-bottom: 100px;
+	z-index: 10;
 }
 
 /*services*/
-.service{
+.service .head{
+	position: relative;
+	display: flex;
 	margin-top:100px;
-	box-shadow: 0px 2px 20px rgba(0,0,0,0.5);
 	padding: 30px;
-	background: linear-gradient( 20deg, rgb(157, 91, 254) 0%, rgb(56, 144, 254) 100%);
+	background: linear-gradient( 45deg, #3503ad,#f7308c);
+	justify-content: center;
+	align-items: center;
+	border-top-right-radius: 10px;
+	height: 60px;
+}
+.service .head:before{
+	content:'';
+	position: absolute;
+	top:0;
+	left: 0;
+	width: 15%;
+	height: 100%;
+	background:rgba(255,255,255,0.1);
+	pointer-events: none;
+}
+.service .conten{
+	position: relative;
+	margin-top: 0;
+	padding: 10px 30px 5px 30px;
+	justify-content: center;
+	align-items: center;
+	background: white;
+}
+
+.service{
+	box-shadow: 0px 2px 20px rgba(0,0,0,0.5);
+	border-radius: 20px;
+}
+.service .head h3{
+	position: absolute;
+	width: 50px;
+	height:50px;
+	border-radius: 50%;
+	line-height: 50px;
+	text-align: center;
+	color: #eee;
+	background: linear-gradient( 45deg, #3503ad,#f7308c);
+	top: -10px;
+	left: -10px;
+	z-index: 21;
+
+}
+
+.service .head h4{
+	color: #ddd;
+	font-weight: bold;
+}
+.service .bawah{
+	position: relative;
+	background: linear-gradient( 45deg,#2000aa,#f6008c);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-bottom-left-radius: 10px;
+	border-bottom-right-radius: 10px;
+	padding: 10px 20px 50px 30px;
+}
+
+.service .bawah ul{
+	display: block;
+	position: relative;
+	color: white;
+	padding: 5px;
+	margin-bottom: 20px;
+	font-size: 14px;
+	text-align: left;
+}
+.service .bawah ul li{
+	margin: 5px;
 }
 
 /*utility*/
@@ -186,25 +282,39 @@ body{
 	border-radius: 40px;
 }
 
-hr{
-	width: 300px;
-	border-color: rgb(160, 91, 254);
+.tbl{
+	display: inline-block;
+	border-radius: 30px;
+	background: linear-gradient( 20deg, rgb(144, 91, 254) 5%, rgb(56, 144, 254) 90%);
+	position: absolute;
+	bottom: 5px; 
+	margin-top: 10px;
+	text-decoration: none;
+	color: #eee;
+	width: 150px;
+	height: 40px;
+	box-shadow: 0 2px 20px solid rgba(0, 0, 0, .5);
+	text-align: center;
+	line-height: 40px;
+	font-size: 12px;
+	transition: 800ms;
+
 }
-
-
+.tbl:hover{
+	text-decoration: none;
+	color: white;
+	background: linear-gradient( 200deg, rgb(144, 91, 254) 50%, rgb(56, 144, 254) 100%);
+}
+.tbl img{
+	width: 20px;
+	height: 20px;
+	margin-right: 5px; 
+}
 /*desktop version*/
 @media (min-width: 992px) {
 	.bungkus{
 		min-height: 100vh;
 	}
-	.navbar{
-	position: fixed;
-	z-index: 9999;
-	color: black;
-	background-color: rgba(0, 0, 0, 0.7);
-	box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
-	}
-
 	.navbar-brand, .nav-link{
 		color: white !important;
 
@@ -225,8 +335,8 @@ hr{
 		margin-bottom: -8px;
 	}
 
-	.nav-link:active{
-		color:rgb(170, 110, 120) !important;
+	.nav-link:hover{
+		font-weight: bold;
 	}
 
 	.jumbotron{
